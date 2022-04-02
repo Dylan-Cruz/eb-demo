@@ -27,7 +27,9 @@ The XML file gets read in at launch by a JPA repository populator. This approach
 - Topic is a url-publish node. 
 ### Repo
 Just your standard default spring crud repo's for topics and topic lists.
+### Service layer (lack of)
+I chose not to define a service layer here for the sake of time and complexity. There's no logic to handle here that exposing the topic repo directly in the topic handler couldn't provide. 
 ### Controller
-
+The combination of a handler and a router comprise the controller in web flux. 
 ### Tests
 I opted to only include test coverage for functions manually defined by me or functions that would be used in the project. This was to save time as this is an exam. In production I would likely include contract and unit tests for other functionality. For instance a contract test on what happens when a topic is read in with all null values. 
