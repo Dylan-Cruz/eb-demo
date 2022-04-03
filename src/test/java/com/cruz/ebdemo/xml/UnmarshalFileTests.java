@@ -41,7 +41,7 @@ public class UnmarshalFileTests {
         TopicList list = (TopicList) marshaller.unmarshal(new StreamSource(file.getInputStream()));
 
         // verify the first item in the list is as expected
-        Topic expectedTopic = new Topic(1L, "a-search-algorithm", "computing");
+        Topic expectedTopic = new Topic(1, "a-search-algorithm", "computing");
         assertEquals(expectedTopic, list.getTopics().get(0));
     }
 }

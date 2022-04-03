@@ -21,8 +21,8 @@ public class TopicRepoPopulatorTests {
 
     @Test
     public void validatePopulatorPopulatesRepo() {
-        Topic expectedTopic = new Topic(3L, "william-butler-yeats", "literature");
-        Topic actualTopic = topicRepository.findById(3L).get();
+        Topic expectedTopic = new Topic(3, "william-butler-yeats", "literature");
+        Topic actualTopic = topicRepository.findById(3).get();
         assertEquals(expectedTopic, actualTopic);
     }
 }

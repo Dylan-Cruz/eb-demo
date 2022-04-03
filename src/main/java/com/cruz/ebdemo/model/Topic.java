@@ -1,9 +1,7 @@
 package com.cruz.ebdemo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -25,20 +23,33 @@ import java.util.List;
 public class Topic {
     @Id
     @XmlElement(name = "topicid")
-    private Long topicId;
+    private Integer topicId;
     @XmlElement(name = "urltitle")
     private String urlTitle;
     @XmlElement(name = "urlclass")
     private String urlClass;
 
     @XmlTransient
-    @ManyToMany(mappedBy = "topics")
+    @JsonIgnore
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @ManyToMany(mappedBy = "topics")
     private List<TopicList> topicLists;
 
-    public Topic(Long topicId, String urlTitle, String urlClass) {
+    public Topic(Integer topicId, String urlTitle, String urlClass) {
         this.topicId = topicId;
         this.urlTitle = urlTitle;
         this.urlClass = urlClass;
     }
+
+    @JsonIgnore
+    public void setTopicLists(List<TopicList> topicLists) {
+        this.topicLists = topicLists;
+    }
+
+    @JsonIgnore
+    public List<TopicList> getTopicLists() {
+        return topicLists;
+    }
+
 }
