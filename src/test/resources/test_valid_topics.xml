@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publish-list>
+    <url-publish>
+        <topicid>1</topicid>
+        <urltitle>a-search-algorithm</urltitle>
+        <urlclass>computing</urlclass>
+    </url-publish>
+    <url-publish>
+        <topicid>2</topicid>
+        <urltitle>green-bay-packers</urltitle>
+        <urlclass>sports</urlclass>
+    </url-publish>
+    <url-publish>
+        <topicid>3</topicid>
+        <urltitle>william-butler-yeats</urltitle>
+        <urlclass>literature</urlclass>
+    </url-publish>
+    <url-publish>
+        <topicid>4</topicid>
+        <urltitle>drake-equation</urltitle>
+        <urlclass>science</urlclass>
+    </url-publish>
+    <url-publish>
+        <topicid>5</topicid>
+        <urltitle>spaghettification</urltitle>
+        <urlclass>science</urlclass>
+    </url-publish>
+</publish-list>
