@@ -6,6 +6,9 @@ This is a repo containing the demo for EB. Since it's public I will be exdluding
 - tests can be run with a standard gradle test task
 - build output will be in the build/libs directory
 - in the event a build is not possible I included the war in the root level of the repo. Feel free to contact me if there are any issues. The very last thing I test is that the project builds and I will not submit an exam that doesn't build on my machine.
+- in the event you're unable to deploy the war I included a jar with an embedded server also at the root level of the repo. You can run this via `java -jar <path_to_jar>`. This server will run on 8080. 
+## Making calls
+- the api endpoint paths are as specced in the test doc. eb/topic/{topicId}, 
 ## Project Setup
 ### Spring
 - I decided to roll with spring boot to get a quicker start versus running with a pure spring approach. 
